@@ -27,13 +27,13 @@
 <!--         <property name="dirname" value="/t/txt" /> -->
 		<property name="dirname" value="E:/BaiduNetdiskDownload/pdf/ftp.tarena" />
         <property name="fileQueue" ref="filequeue" />
-<!--         <property name="indexIO" ref="dbIndexIO" /> -->
-        <property name="indexIO" ref="indexIO" />
+        <property name="indexIO" ref="dbIndexIO" />
+<!--         <property name="indexIO" ref="indexIO" /> -->
 	</bean>
 	
-	<bean id="cliHandler" class="geym.java.training.ch12.hw.CliHandler">
-	   <property name="indexIO" ref="dbIndexIO" />
-	</bean>
+<!-- 	<bean id="cliHandler" class="geym.java.training.ch12.hw.CliHandler"> -->
+<!-- 	   <property name="indexIO" ref="dbIndexIO" /> -->
+<!-- 	</bean> -->
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -42,7 +42,8 @@
 
 	 <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
         <property name="driverClass" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:./test"/>
+<!--         <property name="url" value="jdbc:h2:./test"/> -->
+		<property name="url" value="jdbc:h2:file:D:/edit/github/ch6_demo/test"/>
         <property name="username" value="sa"/>
         <property name="password" value=""/>
     </bean>

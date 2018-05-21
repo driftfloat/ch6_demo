@@ -29,6 +29,7 @@ public class Word97Reader implements IContentReader {
         }
         catch (Exception e)
         {
+        	int i=1;
             e.printStackTrace();
         }finally{
             if(extractor!=null)
