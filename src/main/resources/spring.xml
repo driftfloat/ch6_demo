@@ -19,13 +19,16 @@
     
     <bean id="filequeue" class="java.util.concurrent.ConcurrentLinkedQueue" />
     <bean id="indexIO" class="geym.java.training.ch12.hw.FileIndexIO">
-     <property name="indexFilePath" value="./target/filelist.txt" />
+<!--      <property name="indexFilePath" value="./target/filelist.txt" /> -->
+     <property name="indexFilePath" value="t:/filelist.txt" />
     </bean>
         
 	<bean id="fileIndexTask" class="geym.java.training.ch12.hw.FileIndexTask">
-        <property name="dirname" value="E:\\txt" />
+<!--         <property name="dirname" value="/t/txt" /> -->
+		<property name="dirname" value="E:/BaiduNetdiskDownload/pdf/ftp.tarena" />
         <property name="fileQueue" ref="filequeue" />
-        <property name="indexIO" ref="dbIndexIO" />
+<!--         <property name="indexIO" ref="dbIndexIO" /> -->
+        <property name="indexIO" ref="indexIO" />
 	</bean>
 	
 	<bean id="cliHandler" class="geym.java.training.ch12.hw.CliHandler">
@@ -34,7 +37,7 @@
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		 <!--  <property name="configLocation" value="mybatis-config.xml" />   -->
+<!-- 		  <property name="configLocation" value="mybatis-config.xml" />   -->
 	</bean>
 
 	 <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">

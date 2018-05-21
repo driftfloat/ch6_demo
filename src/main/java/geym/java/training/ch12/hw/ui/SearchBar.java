@@ -24,6 +24,7 @@ public class SearchBar extends JPanel {
     MainFrame parent;
     JTextField txtSearchString = new JTextField("", 24);
     JButton searchBtn = new JButton("搜索");
+    
     JButton indexBtn = new JButton("索引");
     JDialog waitingDailog = new JDialog();
 
@@ -39,7 +40,8 @@ public class SearchBar extends JPanel {
         waitingDailog.add(new JLabel("等待"));
         waitingDailog.pack();
         waitingDailog.setLocationRelativeTo(parent);
-
+        
+        searchBtn.setEnabled(false);
         searchBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 parent.resultPanel.listModel.clear();
@@ -85,12 +87,13 @@ public class SearchBar extends JPanel {
                         SwingUtilities.invokeLater(new Runnable() {
                             public void run() {
                                 JOptionPane.showMessageDialog(parent, "索引重建成功");
+                                searchBtn.setEnabled(true);
                             }
                         });
 
                     }
                 }.start();
-
+                
             }
         });
     }

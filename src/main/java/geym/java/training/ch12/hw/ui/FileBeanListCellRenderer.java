@@ -36,7 +36,7 @@ public class FileBeanListCellRenderer extends JLabel implements ListCellRenderer
 
         // check if this cell is selected
         } else if (isSelected) {
-            background = Color.RED;
+            background = Color.DARK_GRAY;
             foreground = Color.WHITE;
 
         // unselected, and not the DnD drop location
