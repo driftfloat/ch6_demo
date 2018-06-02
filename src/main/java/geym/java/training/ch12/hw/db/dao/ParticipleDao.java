@@ -20,7 +20,7 @@ public interface ParticipleDao {
     
     @Insert("Create table IF NOT EXISTS invertedIndex"
             + "(id int AUTO_INCREMENT PRIMARY KEY," 
-            + "word varchar(100)," 
+            + "word varchar(400)," 
             + "fileid int);"
             + "Create UNIQUE index IF NOT EXISTS word_fileid_index on invertedIndex(word,fileid);")
     public void createTable();

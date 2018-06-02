@@ -25,7 +25,8 @@
         
 	<bean id="fileIndexTask" class="geym.java.training.ch12.hw.FileIndexTask">
 <!--         <property name="dirname" value="/t/txt" /> -->
-		<property name="dirname" value="E:/BaiduNetdiskDownload/pdf/ftp" />
+<!-- 		<property name="dirname" value="E:/BaiduNetdiskDownload/pdf/ftp" /> -->
+		<property name="dirname" value="J:/baidu/df6/411517/mp3" />
         <property name="fileQueue" ref="filequeue" />
         <property name="indexIO" ref="dbIndexIO" />
 <!--         <property name="indexIO" ref="indexIO" /> -->
@@ -42,8 +43,9 @@
 
 	 <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
         <property name="driverClass" value="org.h2.Driver"/>
-<!--         <property name="url" value="jdbc:h2:./test"/> -->
-		<property name="url" value="jdbc:h2:file:D:/edit/github/ch6_demo/test"/>
+        <property name="url" value="jdbc:h2:./test"/>
+<!-- 		<property name="url" value="jdbc:h2:file:D:/edit/github/ch6_demo/test"/> -->
+<!-- 		<property name="url" value="jdbc:h2:file:E:/edit/github/ch6_demo"/> -->
         <property name="username" value="sa"/>
         <property name="password" value=""/>
     </bean>

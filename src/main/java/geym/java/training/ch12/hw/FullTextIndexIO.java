@@ -60,6 +60,9 @@ public class FullTextIndexIO implements IIndexIO {
                     continue;
                 }
                 FileDbBean fileDbBean = FileDbBean.fromFileBean(file);
+                if(fileDbBean.getFilename().contains("S&S. Brucie B. Kid Capri & Ron G - The Champions.lrc") ) {
+                	int i = 1;
+                }
                 fileDbDao.insert(fileDbBean);
                 List<ParticipleBean> ps = fileContenttask.index(fileDbBean);
                 if (ps == null)

@@ -22,7 +22,7 @@ public interface FileDbDao {
     
     @Insert("Create table IF NOT EXISTS files"
             + "(id int AUTO_INCREMENT PRIMARY KEY," 
-            + "filename varchar(100)," 
+            + "filename varchar(400)," 
             + "absolutePath varchar(500),"
             + "updateTime bigint);"
             + "Create index IF NOT EXISTS filename_index on files(filename);")
