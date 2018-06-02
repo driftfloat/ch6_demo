@@ -25,7 +25,7 @@
         
 	<bean id="fileIndexTask" class="geym.java.training.ch12.hw.FileIndexTask">
 <!--         <property name="dirname" value="/t/txt" /> -->
-		<property name="dirname" value="E:/BaiduNetdiskDownload/pdf/ftp.tarena" />
+		<property name="dirname" value="E:/BaiduNetdiskDownload/pdf/ftp" />
         <property name="fileQueue" ref="filequeue" />
         <property name="indexIO" ref="dbIndexIO" />
 <!--         <property name="indexIO" ref="indexIO" /> -->
@@ -57,6 +57,7 @@
                 <entry key="docx" value-ref="docxReader" />
                 <entry key="xls" value-ref="xlsReader" />
                 <entry key="xlsx" value-ref="xlsxReader" />
+                <entry key="pdf" value-ref="pdfReader" />
             </map>
         </property>
     </bean>

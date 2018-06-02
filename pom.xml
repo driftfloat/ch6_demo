@@ -99,5 +99,16 @@
             <artifactId>poi-ooxml</artifactId>
             <version>3.14</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>1.8.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox-lucene</artifactId>
+            <version>1.8.14</version>
+        </dependency>
+        
 	</dependencies>
 </project>
